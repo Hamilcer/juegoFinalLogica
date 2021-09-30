@@ -8,7 +8,7 @@ var keys = {
 let combinations = [];
 
 document.addEventListener("keydown", dibujarTeclado);
-//document.addEventListener("keyup", limpiar);
+document.addEventListener("keyup", limpiar);
 
 var canva = document.getElementById("area_de_dibujo");
 var context = canva.getContext("2d");
@@ -37,8 +37,8 @@ function dibujarTeclado(event){
     console.log(combinations)
     
     var color = "blue";
-    var move = 2;
-    // Hacer que funcionen ambas al tiempo 
+    var move = .5;
+    //Hacer que funcionen ambas al tiempo 
     
     for (i in combinations) {
         if (x > 0 && x < canva.width && y > 0 && y < canva.height) {
@@ -67,30 +67,30 @@ function dibujarTeclado(event){
             // Evitar que el codigo se rompa poir desbodamiento 
             switch(x) {
                 case 0:
-                    x = x + 1
+                    x = 1
                 break;
                 case 300:
-                    x = x - 1
+                    x = 299
                 break;
             }
             switch(y) {
                 case 0:
-                    y = y + 1
+                    y = 1
                 break;
                 case 300:
-                    y = y - 1
+                    y = 299
                 break;
             }
         }
         console.log(x, y)
     }
-    combinations = [];
+    //combinations = [];
 }
 
 
 
 function limpiar(){
-    //combinations = [];
+    combinations = [];
 }
 
 
