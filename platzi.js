@@ -91,13 +91,13 @@ function dibujar(xc = 150, yc = 150)
 
 
 
-function aleatorio(min, max) 
+/* function aleatorio(min, max) 
 {
     var resultado;
     resultado = Math.floor(Math.random() * (max - min + 1)) + min;
     return resultado;
 }
-
+ */
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -113,55 +113,40 @@ let combinations = [];
 document.addEventListener("keydown", dibujarTeclado);
 document.addEventListener("keyup", limpiar);
 
-//var canva = document.getElementById("area_de_dibujo");
-//var context = canva.getContext("2d");
+
 
 var x = 150;
 var y = 150;
 
-//dibujarLinea("red", x+1, y-1, x+1, y+1, context)
-/* 
-function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal, lienzo) { // el contexto es el lienzo
-    
-    lienzo.beginPath();
-    lienzo.strokeStyle = color;
-    lienzo.lineWidth = 2;
-    lienzo.moveTo(xinicial, yinicial);
-    lienzo.lineTo(xfinal, yfinal);
-    lienzo.stroke();
-    lienzo.closePath();
-
-}
- */
 function dibujarTeclado(event){
 
     
-    combinations.push(event.keyCode)
+    //combinations.push(event.keyCode)
     console.log(combinations)
     
     //var color = "blue";
     var move = 5;
     //Hacer que funcionen ambas al tiempo 
     
-    for (i in combinations) {
+    //for (i in combinations) {
         if (x > 0 && x < vp.width-80 && y > 0 && y < vp.height-70) {
     
-            switch(combinations[i]) {
+            switch(event.keyCode) {
                 case keys.UP:
-                    dibujar(x, y);
                     y = y - move
+                    dibujar(x, y);
                 break;
                 case keys.DOWN:
-                    dibujar(x, y);
                     y = y + move
+                    dibujar(x, y);
                 break;
                 case keys.LEFT:
-                    dibujar(x, y);
                     x = x - move
+                    dibujar(x, y);
                 break;
                 case keys.RIGHT:
-                    dibujar(x, y);
                     x = x + move
+                    dibujar(x, y);
                 break; 
     
             }    
@@ -202,12 +187,13 @@ function dibujarTeclado(event){
             break;
         } */
         console.log(x, y)
-        if(x == 250 && y == 250){
-            alert("pista")
+        if(x <= 1 && y <= 1){
+            window.location="./flechas.html";
+            // alert("pista")
         }
     }
-    combinations = [];
-}
+    //combinations = [];
+//}
 
 
 

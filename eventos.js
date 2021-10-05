@@ -22,7 +22,7 @@ function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal, lienzo) { // el
     
     lienzo.beginPath();
     lienzo.strokeStyle = color;
-    lienzo.lineWidth = 2;
+    lienzo.lineWidth = 10;
     lienzo.moveTo(xinicial, yinicial);
     lienzo.lineTo(xfinal, yfinal);
     lienzo.stroke();
