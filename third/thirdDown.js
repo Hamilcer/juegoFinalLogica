@@ -1,20 +1,8 @@
 var main = document.getElementById("thirdDown")
 var mainctx = main.getContext("2d");
 
-var victory = document.getElementById("victory")
-victory.volume = 0.05;
-var defeat = document.getElementById("defeat")
-defeat.volume = 0.07;
-var audio = document.getElementById("audio");
-audio.volume = 0.8;
-
 var mainTiled = {
     url: "./img/thirdDown.png",
-    cargaOK: false
-};
-
-var player = {
-    url: "../player/player.png",
     cargaOK: false
 };
 
@@ -23,10 +11,6 @@ mainTiled.imagen = new Image();
 mainTiled.imagen.src = mainTiled.url;
 mainTiled.imagen.addEventListener("load", cargarMainTiled);
 
-player.imagen = new Image();
-player.imagen.src = player.url
-player.imagen.addEventListener("load", cargarPlayer);
-
 
 function cargarMainTiled()
 {
@@ -34,24 +18,9 @@ function cargarMainTiled()
     dibujar();
 }
 
-function cargarPlayer()
+
+function verificar(x = 235, y = 230)
 {
-    player.cargaOK = true;
-    dibujar();
-}
-
-
-function dibujar(x = 235, y = 230)
-{
-    if (mainTiled.cargaOK)
-    { 
-        mainctx.drawImage(mainTiled.imagen, 0, 0);
-    }
-    if (player.cargaOK)
-    {
-        mainctx.drawImage(player.imagen, x, y);
-    }
-
     // right
     if(x >= 435 && x <= main.width && y <= 260 && y >= 230 ){
         window.location="../down/down.html";
