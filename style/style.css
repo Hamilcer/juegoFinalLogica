@@ -1,8 +1,11 @@
 body {
     display: flex;
+    flex-direction: column;
     height: 90vh;
     justify-content: center;
     align-items: center;
     background-color: rgba(231, 231, 231, 0.8);
 }
+h1 {
+    color: red;
 

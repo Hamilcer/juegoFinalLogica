@@ -67,6 +67,7 @@ function dibujar(x = 235, y = 230)
             victory.play();
             main.remove();
             document.getElementById("winimg").innerHTML='<img src="./img/win.gif"/ height="250">'; 
+            document.getElementById("wintext").innerHTML='<h1>Ganaste!</h1>'; 
         }else{
             defeat.play();
             alert("Incorrecto")
