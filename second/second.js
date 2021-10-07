@@ -2,11 +2,11 @@ var main = document.getElementById("second")
 var secondctx = main.getContext("2d");
 
 var victory = document.getElementById("victory")
-victory.volume = 0.3;
+victory.volume = 0.05;
 var defeat = document.getElementById("defeat")
-defeat.volume = 0.3;
+defeat.volume = 0.07;
 var audio = document.getElementById("audio");
-audio.volume = 0.8;
+audio.volume = .9;
 
 var secondTiled = {
     url: "./img/second.png",

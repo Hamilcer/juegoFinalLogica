@@ -2,9 +2,9 @@ var main = document.getElementById("third")
 var mainctx = main.getContext("2d");
 
 var victory = document.getElementById("victory")
-victory.volume = 0.3;
+victory.volume = 0.05;
 var defeat = document.getElementById("defeat")
-defeat.volume = 0.3;
+defeat.volume = 0.07;
 var audio = document.getElementById("audio");
 audio.volume = 0.2;
 
@@ -58,7 +58,7 @@ function dibujar(x = 235, y = 230)
     }
     //down
     if(x >= 185 && x <= 245 && y <= 500 && y >= 404 ){
-        window.location="./third/thirdDown.html";
+        window.location="./thirdDown.html";
     }
     // cofre
     if(x >= 0 && x <= 15 && y <= 245 && y >= 200 ){

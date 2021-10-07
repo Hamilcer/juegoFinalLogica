@@ -2,11 +2,11 @@ var main = document.getElementById("main")
 var mainctx = main.getContext("2d");
 
 var victory = document.getElementById("victory")
-victory.volume = 0.7;
+victory.volume = 0.09;
 var defeat = document.getElementById("defeat")
-defeat.volume = 0.3;
+defeat.volume = 0.07;
 var audio = document.getElementById("audio");
-audio.volume = 0.2;
+audio.volume = 0.14;
 
 var mainTiled = {
     url: "./img/main.png",
@@ -58,7 +58,7 @@ function dibujar(x = 235, y = 230)
     }
     // left
     if(x >= 0 && x <= 6 && y <= 250 && y >= 200 ){
-        window.location="./third/third.html";
+        window.location="../third/third.html";
     }
     //cofre GANO
     if(x >= 210 && x <= 235 && y <= 4 && y >= 0 ){
