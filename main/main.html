@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
     <title>Logica game</title>
 </head>
 <body>
-    <div id="winimg"></div>
     <canvas width="500" height="500" id="main"></canvas>
-    
+    <div id="winimg"></div>
+    <audio src="../music/victory.mp3" id="victory"></audio>
+    <audio src="../music/defeat.mp3" id="defeat"></audio>
+    <div>
+        <audio src="../music/main.mp3" autoplay loop id="audio"></audio>
+    </div>
+    <script src="../move.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>
